@@ -80,42 +80,41 @@ p {
   position: relative;
   overflow: hidden;
 }
-.beauty-section h2,
-.beauty-section p,
-.beauty-section .section-label {
-  position: relative;
-  z-index: 2;
-}
 
 .beauty-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.18;
   z-index: 0;
+  opacity: 0.28;
 
-  background-size: 120px 120px;
+  background-color: #F6F3EA;
 
   background-image:
     radial-gradient(circle at center,
-      rgba(168,195,160,.35) 0%,
-      rgba(168,195,160,.35) 8%,
-      transparent 8%),
-    linear-gradient(45deg,
-      transparent 42%,
-      rgba(168,195,160,.25) 42%,
-      rgba(168,195,160,.25) 58%,
-      transparent 58%),
-    linear-gradient(-45deg,
-      transparent 42%,
-      rgba(175,198,233,.18) 42%,
-      rgba(175,198,233,.18) 58%,
-      transparent 58%);
-}
+      rgba(168,195,160,.75) 0 8px,
+      transparent 8px),
 
-  background-size: 80px 80px;
-}
+    conic-gradient(
+      from 45deg,
+      rgba(168,195,160,.35) 0deg 45deg,
+      transparent 45deg 90deg,
+      rgba(175,198,233,.28) 90deg 135deg,
+      transparent 135deg 180deg,
+      rgba(168,195,160,.35) 180deg 225deg,
+      transparent 225deg 270deg,
+      rgba(175,198,233,.28) 270deg 315deg,
+      transparent 315deg 360deg
+    );
 
+  background-size: 120px 120px;
+}
+.beauty-section .section-label,
+.beauty-section h2,
+.beauty-section p {
+  position: relative;
+  z-index: 2;
+}
 .bulb-i {
   position: relative;
   color: transparent;
