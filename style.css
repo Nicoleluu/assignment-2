@@ -108,23 +108,29 @@ p{
 }
 .marquee-wrapper {
   overflow: hidden;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 12px 0 24px;
+  border: none;
 }
 
 .marquee-track {
   display: flex;
   gap: 14px;
   width: max-content;
-  animation: marqueeMove 18s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
-@keyframes marqueeMove {
+.pill {
+  padding: 8px 18px;
+  border: 1px solid #A8C3A0;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(246, 243, 234, 0.75);
+}
+
+@keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-
 .pill {
   padding: 12px 20px;
   border: 1px solid var(--sage);
