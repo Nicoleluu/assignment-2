@@ -1,72 +1,83 @@
+const values = [
+  "Beauty","Function","Care","Clarity",
+  "Emotion","Access","Justice","Play"
+];
+
+const marqueeTrack = document.getElementById("marqueeTrack");
 const constellation = document.getElementById("constellation");
-const addBtn = document.getElementById("addValue");
 const input = document.getElementById("valueInput");
-const pills = document.querySelectorAll(".pill");
+const addBtn = document.getElementById("addValue");
 
-/* make existing stars draggable */
-document.querySelectorAll(".star").forEach(makeDraggable);
+values.concat(values).forEach(value => {
+  const pill = document.createElement("button");
+  pill.className = "pill";
+  pill.textContent = value;
 
-/* clicking pills adds stars */
-pills.forEach(pill => {
-  pill.addEventListener("click", () => {
-    createStar(pill.innerText);
-  });
+  pill.onclick = () => addStar(value);
+
+  marqueeTrack.appendChild(pill);
 });
 
-/* custom input */
-addBtn.addEventListener("click", () => {
-  if (input.value.trim()) {
-    createStar(input.value);
-    input.value = "";
-  }
-});
-
-function createStar(text) {
+function addStar(text){
   const star = document.createElement("div");
   star.className = "star";
-  star.innerText = text;
+  star.textContent = text;
 
-  star.style.left = Math.random() * 70 + "%";
-  star.style.top = Math.random() * 70 + "%";
+  star.style.left = Math.random()*70 + "%";
+  star.style.top = Math.random()*70 + "%";
 
-  const colors = ["#d8dfc6", "#d8e3f4", "#eadc86"];
+  const colors = [
+    "#d8dfc6",
+    "#d8e3f4",
+    "#eadc86"
+  ];
+
   star.style.background =
-    colors[Math.floor(Math.random() * colors.length)];
-
-  constellation.appendChild(star);
+    colors[Math.floor(Math.random()*colors.length)];
 
   makeDraggable(star);
+  constellation.appendChild(star);
 }
 
-function makeDraggable(el) {
-  let isDragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
+addBtn.onclick = () => {
+  if(input.value.trim()){
+    addStar(input.value.trim());
+    input.value = "";
+  }
+};
 
-  el.addEventListener("mousedown", (e) => {
-    isDragging = true;
+function makeDraggable(el){
+  let isDown = false;
+  let offsetX, offsetY;
+
+  el.addEventListener("mousedown", e => {
+    isDown = true;
     offsetX = e.offsetX;
     offsetY = e.offsetY;
-    el.style.cursor = "grabbing";
   });
 
-  document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
+  document.addEventListener("mousemove", e => {
+    if(!isDown) return;
 
     const rect = constellation.getBoundingClientRect();
 
-    let x = e.clientX - rect.left - offsetX;
-    let y = e.clientY - rect.top - offsetY;
+    el.style.left =
+      (e.clientX - rect.left - offsetX) + "px";
 
-    x = Math.max(0, Math.min(x, rect.width - el.offsetWidth));
-    y = Math.max(0, Math.min(y, rect.height - el.offsetHeight));
-
-    el.style.left = x + "px";
-    el.style.top = y + "px";
+    el.style.top =
+      (e.clientY - rect.top - offsetY) + "px";
   });
 
   document.addEventListener("mouseup", () => {
-    isDragging = false;
-    el.style.cursor = "grab";
+    isDown = false;
   });
 }
+
+[
+  "empathy",
+  "clarity",
+  "curiosity",
+  "honesty",
+  "sustainability",
+  "inclusivity"
+].forEach(addStar);
