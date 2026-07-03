@@ -32,6 +32,7 @@ section {
   margin-bottom: 40px;
 }
 
+/* HERO */
 .hero-title {
   display: flex;
   flex-direction: column;
@@ -39,12 +40,13 @@ section {
 }
 
 .line-one {
-  font-family: 'Inter';
-  font-size: 4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  font-weight: 500;
 }
 
 .line-two {
-  font-family: 'Inter';
+  font-family: 'Cormorant Garamond', serif;
   font-size: 10rem;
   font-weight: 700;
   margin-left: 15%;
@@ -52,12 +54,13 @@ section {
 }
 
 .line-three {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Cormorant Garamond', serif;
   font-size: 6rem;
   margin-left: 38%;
-  font-style: italic;
+  font-style: normal;
 }
 
+/* TEXT */
 h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4rem;
@@ -70,13 +73,17 @@ p {
   font-size: 1.2rem;
 }
 
+/* BEAUTIFUL */
 .beauty-word {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 1.3em;
+  font-family: "Pinyon Script", cursive !important;
+  font-size: 1.6em;
+  font-weight: 400;
   color: var(--sage);
-  line-height: 1;
+  display: inline-block;
+  transform: translateY(6px);
 }
 
+/* TILE BACKGROUND */
 .beauty-section {
   position: relative;
 }
@@ -126,6 +133,7 @@ p {
   z-index: 2;
 }
 
+/* LIGHTBULB */
 .bulb-i {
   position: relative;
   color: transparent;
@@ -137,12 +145,14 @@ p {
   top: -6px;
 }
 
+/* EFFORTLESS */
 .effortless-word {
   color: transparent;
   -webkit-text-stroke: 1px var(--text);
   opacity: .3;
 }
 
+/* RESEARCH */
 .data-grid,
 .shifted-grid {
   position: absolute;
@@ -170,6 +180,7 @@ p {
   background-size: 30px 30px;
 }
 
+/* PEOPLE */
 .people-crowd {
   position: absolute;
   bottom: -10px;
@@ -184,6 +195,7 @@ p {
   font-size: 4rem;
 }
 
+/* MARQUEE */
 .marquee-wrapper {
   overflow: hidden;
 }
@@ -207,6 +219,7 @@ p {
   background: var(--sage);
 }
 
+/* CONSTELLATION */
 .custom-input {
   margin-top: 40px;
 }
