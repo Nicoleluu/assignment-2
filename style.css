@@ -21,6 +21,13 @@ section{
   border-bottom:1px solid var(--line);
 }
 
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
 .hero {
   padding: 100px 0 40px;
 }
