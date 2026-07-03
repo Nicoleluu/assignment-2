@@ -105,7 +105,7 @@ p{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(246,243,234,.45);
+  background:rgba(246,243,234,.20);
   z-index:1;
 }
 
