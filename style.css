@@ -93,11 +93,11 @@ p{
   inset:0;
 
   background-image:url("assets/tile-pattern.png");
-  background-size:300px auto;
+  background-size:190px auto;
   background-repeat:repeat;
   background-position:center;
 
-  opacity:1;
+  opacity:72;
   z-index:0;
 }
 
@@ -105,7 +105,7 @@ p{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(246,243,234,.10);
+  background:rgba(246,243,234,.22);
   z-index:1;
 }
 
