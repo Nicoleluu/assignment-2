@@ -21,31 +21,37 @@ section{
   border-bottom:1px solid var(--line);
 }
 
-.hero h1{
-  font-family:'Cormorant Garamond';
-  font-size:8rem;
-  line-height:.9;
-  font-weight:400;
+.hero {
+  padding: 100px 0 40px;
 }
 
-.section-label{
-  font-family:'IBM Plex Mono';
-  font-size:.9rem;
-  letter-spacing:.12em;
-  margin-bottom:30px;
-  color:#777;
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  line-height: .9;
 }
-.split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
+
+.line-one {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-left: 2%;
 }
-.split{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
+
+.line-two {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9rem;
+  font-weight: 500;
+  margin-left: 8%;
+  color: var(--text);
+}
+
+.line-three {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-left: 3%;
+  font-style: normal;
 }
 
 h2{
@@ -67,25 +73,24 @@ p{
   font-size:1.4em;
 }
 
-.tile{
+.tile {
   width: 100%;
   height: 520px;
-  background-image: url("./assets/tile-pattern.png");
+  background-image: url("assets/tile-pattern.png");
   background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
-.lightbulb-letter{
+.lightbulb-letter {
   display: inline-block;
-  width: 58px;
-  height: 88px;
-  background-image: url("./assets/lightbulb.png");
+  width: 55px;
+  height: 80px;
+  background-image: url("assets/lightbulb.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   vertical-align: middle;
-  margin: 0 4px;
-  transform: translateY(-4px);
+  margin: 0 6px;
 }
 .effortless-word{
   color:transparent;
@@ -93,42 +98,39 @@ p{
   opacity:.35;
 }
 
-.people-image{
+.people-image {
   width: 100%;
-  height: 340px;
-  background-image: url("./assets/people-line.png");
+  height: 280px;
+  background-image: url("assets/people-line.png");
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
-.marquee-wrapper{
-  overflow:hidden;
-  padding:20px 0;
+.marquee-wrapper {
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.marquee-track{
-  display:flex;
-  gap:14px;
-  width:max-content;
-  animation:marquee 20s linear infinite;
+.marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: marqueeMove 18s linear infinite;
 }
 
-.marquee-track span{
-  padding:14px 24px;
-  border:1px solid #a8c3a0;
-  border-radius:999px;
+@keyframes marqueeMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-@keyframes marquee{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+.pill {
+  padding: 12px 20px;
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  font-size: 0.95rem;
 }
-
-.input-row{
-  display:flex;
-  gap:10px;
-}
-
 input{
   padding:14px;
   width:220px;
