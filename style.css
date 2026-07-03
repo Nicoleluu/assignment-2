@@ -72,15 +72,29 @@ p{
   color:#A8C3A0;
   font-size:1.4em;
 }
+.beauty-section {
+  position: relative;
+  overflow: hidden;
 
-.tile {
-  width: 100%;
-  height: 520px;
   background-image: url("assets/tile-pattern.png");
-  background-size: cover;
+  background-size: 320px auto;
+  background-repeat: repeat;
   background-position: center;
-  background-repeat: no-repeat;
 }
+
+.beauty-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(246, 243, 234, 0.82);
+  z-index: 1;
+}
+
+.beauty-section .left {
+  position: relative;
+  z-index: 2;
+}
+
 .lightbulb-letter {
   display: inline-block;
   width: 55px;
