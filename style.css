@@ -86,11 +86,11 @@ p{
   font-size:1.4em;
 }
 .beauty-section{
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
-  min-height: 620px;
+  position:relative;
+  overflow:hidden;
+  min-height:620px;
+  display:flex;
+  align-items:center;
 }
 
 .beauty-section::before{
@@ -123,10 +123,10 @@ p{
 }
 
 .beauty-section .left{
-  padding:60px;
-  align-self:center;
-  width:100%;
-  max-width:1000px;
+  position:relative;
+  z-index:2;
+  width:65%;
+  padding:80px;
 }
 .lightbulb-letter {
   display: inline-block;
