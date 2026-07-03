@@ -79,56 +79,48 @@ p {
 .beauty-section {
   position: relative;
   overflow: hidden;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding-left: 6vw;
-  padding-right: 6vw;
+  isolation: isolate;
 }
 
+/* FULL TILE BACKGROUND */
 .beauty-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
-  opacity: .28;
+  z-index: -1;
 
   background-color: #f6f3ea;
 
-  /* tile grid + starburst */
   background-image:
-    
-    /* grid lines */
-    linear-gradient(rgba(120,120,120,.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120,120,120,.18) 1px, transparent 1px),
+    /* tile borders */
+    linear-gradient(#cfc8bb 1px, transparent 1px),
+    linear-gradient(90deg, #cfc8bb 1px, transparent 1px),
 
-    /* star shape */
+    /* starbursts */
+    radial-gradient(circle at center,
+      transparent 0 18px,
+      rgba(168,195,160,.45) 18px 20px,
+      transparent 20px),
+
     conic-gradient(
       from 0deg,
-      transparent 0deg 22deg,
-      rgba(168,195,160,.75) 22deg 28deg,
-      transparent 28deg 67deg,
-      rgba(168,195,160,.75) 67deg 73deg,
-      transparent 73deg 112deg,
-      rgba(168,195,160,.75) 112deg 118deg,
-      transparent 118deg 157deg,
-      rgba(168,195,160,.75) 157deg 163deg,
-      transparent 163deg 202deg,
-      rgba(168,195,160,.75) 202deg 208deg,
-      transparent 208deg 247deg,
-      rgba(168,195,160,.75) 247deg 253deg,
-      transparent 253deg 292deg,
-      rgba(168,195,160,.75) 292deg 298deg,
-      transparent 298deg 337deg,
-      rgba(168,195,160,.75) 337deg 343deg,
-      transparent 343deg 360deg
-    ),
-
-    /* center circle */
-    radial-gradient(
-      circle at center,
-      rgba(168,195,160,.55) 0%,
-      rgba(168,195,160,.3) 8%,
-      transparent 8%
+      transparent 0deg 20deg,
+      rgba(168,195,160,.55) 20deg 25deg,
+      transparent 25deg 65deg,
+      rgba(168,195,160,.55) 65deg 70deg,
+      transparent 70deg 110deg,
+      rgba(168,195,160,.55) 110deg 115deg,
+      transparent 115deg 155deg,
+      rgba(168,195,160,.55) 155deg 160deg,
+      transparent 160deg 200deg,
+      rgba(168,195,160,.55) 200deg 205deg,
+      transparent 205deg 245deg,
+      rgba(168,195,160,.55) 245deg 250deg,
+      transparent 250deg 290deg,
+      rgba(168,195,160,.55) 290deg 295deg,
+      transparent 295deg 335deg,
+      rgba(168,195,160,.55) 335deg 340deg,
+      transparent 340deg 360deg
     );
 
   background-size:
@@ -142,6 +134,8 @@ p {
     0 0,
     60px 60px,
     60px 60px;
+
+  opacity: .35;
 }
 .beauty-section .section-label,
 .beauty-section h2,
