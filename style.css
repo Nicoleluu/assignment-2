@@ -47,29 +47,31 @@ p {
 .hero-title {
   display: flex;
   flex-direction: column;
+  line-height: .9;
 }
 
 .line-one {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Cormorant Garamond', serif;
   font-size: 6rem;
 }
 
 .line-two {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-size: 9rem;
+  font-weight: 700;
   margin-left: 18%;
   color: var(--sage);
 }
 
 .line-three {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 6rem;
   margin-left: 45%;
 }
 
 .beauty-word {
-  font-family: 'Italiana';
+  font-family: 'Italiana', serif;
   font-style: italic;
   color: var(--sage);
 }
@@ -78,7 +80,7 @@ p {
   content: "";
   position: absolute;
   right: 8%;
-  top: 20%;
+  top: 18%;
   width: 320px;
   height: 320px;
   opacity: .18;
@@ -96,7 +98,7 @@ p {
 .bulb-i::before {
   content: "💡";
   position: absolute;
-  top: -6px;
+  top: -5px;
 }
 
 .scribble {
