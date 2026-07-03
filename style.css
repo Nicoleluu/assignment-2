@@ -89,9 +89,12 @@ p{
   content:"";
   position:absolute;
   inset:0;
+  
   background-image:url("assets/tile-pattern-v2.png");
-  background-size:190px;
+  background-size:220px;
   background-repeat:repeat;
+  background-position:center;
+  
   opacity:.35;
   z-index:0;
 }
@@ -100,7 +103,7 @@ p{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(246,243,234,.55);
+  background:rgba(246,243,234,.35);
   z-index:1;
 }
 
@@ -146,8 +149,13 @@ p{
   gap:14px;
   width:max-content;
   animation:marquee 20s linear infinite;
+  pointer-events:auto;
 }
-
+.pill{
+  pointer-events:auto;
+  position:relative;
+  z-index:20;
+}
 @keyframes marquee{
   from{transform:translateX(0);}
   to{transform:translateX(-50%);}
