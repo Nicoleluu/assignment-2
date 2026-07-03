@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>What Counts as Good Design?</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&family=IBM+Plex+Mono&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=IBM+Plex+Mono&family=Pinyon+Script&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <main>
@@ -28,29 +29,27 @@
   <div class="left">
     <div class="section-label">BEAUTY / USE</div>
 
-<h2>
-If something is <span class="beauty-word">beautiful</span> but difficult to use,<br>
-does it still count as good design?
-</h2>
+    <h2>
+      If something is <span class="beauty-word">beautiful</span> but difficult to use,
+      does it still count as good design?
+    </h2>
 
     <p>
       Some believe beauty creates meaning.
       Others believe usefulness is everything.
     </p>
   </div>
-
 </section>
 
 <section class="split">
   <div class="left">
     <div class="section-label">INTUITION / TESTING</div>
     <h2>
-     Should designers trust the<span class="lightbulb-letter"></span>nstincts?
+      Should designers trust the
+      <span class="lightbulb-letter"></span>nstincts?
     </h2>
     <p>Intuition shapes ideas. Testing challenges them.</p>
   </div>
-
-  <div class="right image-block scribble"></div>
 </section>
 
 <section class="split">
@@ -62,8 +61,6 @@ does it still count as good design?
     </h2>
     <p>Some experiences become meaningful because they require effort.</p>
   </div>
-
-  <div class="right image-block hill"></div>
 </section>
 
 <section class="split">
@@ -72,8 +69,6 @@ does it still count as good design?
     <h2>Can research ever be neutral?</h2>
     <p>Good designers don’t eliminate bias. They learn to recognize it.</p>
   </div>
-
-  <div class="right image-block grids"></div>
 </section>
 
 <section class="split people-section">
@@ -83,47 +78,30 @@ does it still count as good design?
     <p>Good design for one person may exclude another.</p>
   </div>
 
-<div class="right">
-  <div class="people-image"></div>
-</div>
+  <div class="right">
+    <div class="people-image"></div>
+  </div>
 </section>
 
 <section class="constellation-section">
-  <div class="section-label">BUILD YOUR VALUES CONSTELLATION</div>
 
   <div class="marquee-wrapper">
-    <div class="marquee-track">
-      <button class="pill">Beauty</button>
-      <button class="pill">Function</button>
-      <button class="pill">Care</button>
-      <button class="pill">Clarity</button>
-      <button class="pill">Emotion</button>
-      <button class="pill">Access</button>
-      <button class="pill">Justice</button>
-      <button class="pill">Play</button>
-
-      <button class="pill">Beauty</button>
-      <button class="pill">Function</button>
-      <button class="pill">Care</button>
-      <button class="pill">Clarity</button>
-      <button class="pill">Emotion</button>
-      <button class="pill">Access</button>
-      <button class="pill">Justice</button>
-      <button class="pill">Play</button>
-    </div>
+    <div class="marquee-track" id="marqueeTrack"></div>
   </div>
+
+  <div class="section-label">BUILD YOUR VALUES CONSTELLATION</div>
 
   <div class="input-row">
     <input id="valueInput" placeholder="Add your own value...">
     <button id="addValue">Add</button>
   </div>
 
-  <div id="constellation">
-    <div class="star">empathy</div>
-    <div class="star">clarity</div>
-    <div class="star">curiosity</div>
-    <div class="star">honesty</div>
-    <div class="star">sustainability</div>
-    <div class="star">inclusivity</div>
-  </div>
+  <div id="constellation"></div>
+
 </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
