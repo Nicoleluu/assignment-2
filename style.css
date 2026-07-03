@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap');
+
+:root {
+  --bg: #F6F3EA;
+  --text: #1C1C1C;
+  --line: #D8D2C8;
+  --sage: #A8C3A0;
+  --blue: #AFC6E9;
+  --yellow: #E9D66B;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+main {
+  width: 85%;
+  margin: auto;
+}
+
+.hero {
+  padding: 80px 0;
+}
+
+.year {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #777;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem;
+  line-height: 0.9;
+  margin: 20px 0;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  max-width: 800px;
+}
+
+.intro {
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 120px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.value-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.value-btn {
+  padding: 12px 20px;
+  border: none;
+  background: var(--sage);
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: 'Inter';
+}
+
+.value-btn:hover {
+  background: var(--yellow);
+}
+
+.custom-input {
+  margin-top: 30px;
+}
+
+input {
+  padding: 12px;
+  width: 250px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+#addValue {
+  padding: 12px 20px;
+  border: none;
+  background: var(--blue);
+  cursor: pointer;
+}
+
+#constellation {
+  position: relative;
+  margin-top: 60px;
+  min-height: 500px;
+  border: 1px dashed var(--line);
+}
+
+.star {
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.ending {
+  margin-top: 80px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  max-width: 700px;
+}
