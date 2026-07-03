@@ -72,29 +72,46 @@ p{
   color:#A8C3A0;
   font-size:1.4em;
 }
-.beauty-section {
+.beauty-section{
   position: relative;
   overflow: hidden;
-
-  background-image: url("assets/tile-pattern.png");
-  background-size: 320px auto;
-  background-repeat: repeat;
-  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 620px;
 }
 
-.beauty-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(246, 243, 234, 0.82);
-  z-index: 1;
+.beauty-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:url("assets/tile-pattern.png");
+  background-size:280px auto;
+  background-repeat:repeat;
+  background-position:center;
+
+  opacity:.55;
+  z-index:0;
 }
 
-.beauty-section .left {
-  position: relative;
-  z-index: 2;
+.beauty-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(246,243,234,.72);
+  z-index:1;
 }
 
+.beauty-section .left,
+.beauty-section .right{
+  position:relative;
+  z-index:2;
+}
+
+.beauty-section .left{
+  padding:40px;
+  align-self:center;
+}
 .lightbulb-letter {
   display: inline-block;
   width: 55px;
