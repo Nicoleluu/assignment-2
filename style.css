@@ -91,11 +91,11 @@ p{
   inset:0;
   
   background-image:url("assets/tile-pattern-v2.png");
-  background-size:220px;
+  background-size:500px;
   background-repeat:repeat;
   background-position:center;
   
-  opacity:.35;
+  opacity:.50;
   z-index:0;
 }
 
