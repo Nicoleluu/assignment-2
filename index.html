@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>What Counts as Good Design?</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;700&family=IBM+Plex+Mono:wght@300;400&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;700&family=IBM+Plex+Mono:wght@300;400&family=Pinyon+Script&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,18 +14,33 @@
 <main>
 
 <section class="hero">
-  <p class="year">2026</p>
+  <div class="hero-title">
+    <div class="line-one">what counts as</div>
+    <div class="line-two">GOOD</div>
+    <div class="line-three">design?</div>
+  </div>
+</section>
 
-  <h1 class="hero-title">
-  <span class="line-one">what counts as</span>
-  <span class="line-two">GOOD</span>
-  <span class="line-three">design?</span>
-</h1>
+<section class="marquee-wrapper">
+  <div class="marquee-track">
+    <button class="value-btn">Beauty</button>
+    <button class="value-btn">Function</button>
+    <button class="value-btn">Care</button>
+    <button class="value-btn">Clarity</button>
+    <button class="value-btn">Emotion</button>
+    <button class="value-btn">Access</button>
+    <button class="value-btn">Justice</button>
+    <button class="value-btn">Play</button>
 
-  <p class="intro">
-    Design is never one thing. It is function, feeling, access, bias,
-    labor, beauty, testing, intuition, care.
-  </p>
+    <button class="value-btn">Beauty</button>
+    <button class="value-btn">Function</button>
+    <button class="value-btn">Care</button>
+    <button class="value-btn">Clarity</button>
+    <button class="value-btn">Emotion</button>
+    <button class="value-btn">Access</button>
+    <button class="value-btn">Justice</button>
+    <button class="value-btn">Play</button>
+  </div>
 </section>
 
 <section class="beauty-section">
@@ -42,20 +57,11 @@
   </p>
 </section>
 
-<section class="intuition-section">
+<section>
   <div class="section-label">INTUITION / TESTING</div>
 
-<div class="intuition-doodles">
-  <div class="scribble"></div>
-  <div class="graph-line"></div>
-  <div class="check-grid"></div>
-</div>
-
   <h2>
-    Should designers trust their
-    <span class="bulb-word">
-  <span class="bulb-i">i</span>nst<span class="bulb-i">i</span>ncts
-</span>
+    Should designers trust the<span class="bulb-i">i</span>r instincts?
   </h2>
 
   <p>
@@ -72,89 +78,51 @@
   </h2>
 
   <p>
-    Some experiences become meaningful because they require patience, slowness, and effort.
+    Some experiences become meaningful because they require effort.
   </p>
 </section>
 
-<section class="bias-section">
+<section>
   <div class="section-label">RESEARCH / BIAS</div>
 
-  <div class="bias-doodles">
-    <div class="data-grid"></div>
-    <div class="shifted-grid"></div>
-    <div class="highlight-circle"></div>
-  </div>
+  <div class="data-grid"></div>
+  <div class="shifted-grid"></div>
 
   <h2>Can research ever be neutral?</h2>
 
   <p>
-    Every method carries assumptions.
     Good designers don’t eliminate bias. They learn to recognize it.
   </p>
 </section>
 
-<section class="power-section">
+<section>
   <div class="section-label">POWER / ACCESS</div>
-
-  <div class="people-crowd">
-  <span>◡̈</span>
-  <span>☺</span>
-  <span>✿</span>
-  <span>☻</span>
-  <span>◕‿◕</span>
-  <span>☼</span>
-</div>
 
   <h2>Who gets considered in the design process?</h2>
 
   <p>
     Good design for one person may exclude another.
-    Design is never neutral.
   </p>
+
+  <div class="people-crowd">
+    <span>🙂</span>
+    <span>👵</span>
+    <span>🧑🏽</span>
+    <span>👦</span>
+    <span>👩🏻</span>
+    <span>🧔🏾</span>
+  </div>
 </section>
 
-<section class="constellation-section">
-  <div class="section-label">BUILD YOUR DESIGN CONSTELLATION</div>
-
-  <h2>So what matters most to you?</h2>
-
-  <p>
-    There is no universal answer. Only the values you choose to design with.
-  </p>
-
-  <div class="marquee-wrapper">
-    <div class="marquee-track">
-      <button class="value-btn">Beauty</button>
-      <button class="value-btn">Function</button>
-      <button class="value-btn">Care</button>
-      <button class="value-btn">Clarity</button>
-      <button class="value-btn">Emotion</button>
-      <button class="value-btn">Access</button>
-      <button class="value-btn">Justice</button>
-      <button class="value-btn">Play</button>
-
-      <button class="value-btn">Beauty</button>
-      <button class="value-btn">Function</button>
-      <button class="value-btn">Care</button>
-      <button class="value-btn">Clarity</button>
-      <button class="value-btn">Emotion</button>
-      <button class="value-btn">Access</button>
-      <button class="value-btn">Justice</button>
-      <button class="value-btn">Play</button>
-    </div>
-  </div>
+<section>
+  <div class="section-label">BUILD YOUR VALUES CONSTELLATION</div>
 
   <div class="custom-input">
-    <input type="text" id="customValue" placeholder="Add your own value..." />
+    <input id="valueInput" placeholder="Add your own value...">
     <button id="addValue">Add</button>
   </div>
 
   <div id="constellation"></div>
-
-  <p class="ending">
-    Maybe good design isn’t about finding the right answer—
-    but understanding what matters enough to guide your choices.
-  </p>
 </section>
 
 </main>
