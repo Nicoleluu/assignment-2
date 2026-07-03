@@ -98,7 +98,6 @@ p{
   background-position:center;
 
   opacity:1;
-  filter: contrast(1.5) saturate(1.2);
   z-index:0;
 }
 
