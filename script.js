@@ -5,30 +5,28 @@ const input = document.getElementById("customValue");
 
 const colors = ["#A8C3A0", "#AFC6E9", "#E9D66B"];
 
-function makeDraggable(element) {
-  let isDragging = false;
-  let offsetX, offsetY;
+function makeDraggable(el) {
+  let dragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
 
-  element.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    offsetX = e.clientX - element.offsetLeft;
-    offsetY = e.clientY - element.offsetTop;
+  el.addEventListener("mousedown", (e) => {
+    dragging = true;
+    offsetX = e.offsetX;
+    offsetY = e.offsetY;
   });
 
   document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
+    if (!dragging) return;
 
     const rect = constellation.getBoundingClientRect();
 
-    let x = e.clientX - rect.left - offsetX;
-    let y = e.clientY - rect.top - offsetY;
-
-    element.style.left = `${x}px`;
-    element.style.top = `${y}px`;
+    el.style.left = `${e.clientX - rect.left - offsetX}px`;
+    el.style.top = `${e.clientY - rect.top - offsetY}px`;
   });
 
   document.addEventListener("mouseup", () => {
-    isDragging = false;
+    dragging = false;
   });
 }
 
@@ -37,13 +35,14 @@ function createStar(value) {
   star.classList.add("star");
   star.innerText = value;
 
-  star.style.backgroundColor =
+  star.style.background =
     colors[Math.floor(Math.random() * colors.length)];
 
   star.style.left = Math.random() * 80 + "%";
   star.style.top = Math.random() * 80 + "%";
 
   constellation.appendChild(star);
+
   makeDraggable(star);
 }
 
