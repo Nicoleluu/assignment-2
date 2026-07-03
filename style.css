@@ -90,32 +90,59 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.45;
+  opacity: .28;
 
-  background-color: #F6F3EA;
+  background-color: #f6f3ea;
+
+  /* tile grid + starburst */
   background-image:
-    linear-gradient(#b9b2a8 1px, transparent 1px),
-    linear-gradient(90deg, #b9b2a8 1px, transparent 1px),
-    repeating-conic-gradient(
-      from 45deg,
-      rgba(63, 105, 82, 0.55) 0deg 12deg,
-      transparent 12deg 45deg
+    
+    /* grid lines */
+    linear-gradient(rgba(120,120,120,.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120,120,120,.18) 1px, transparent 1px),
+
+    /* star shape */
+    conic-gradient(
+      from 0deg,
+      transparent 0deg 22deg,
+      rgba(168,195,160,.75) 22deg 28deg,
+      transparent 28deg 67deg,
+      rgba(168,195,160,.75) 67deg 73deg,
+      transparent 73deg 112deg,
+      rgba(168,195,160,.75) 112deg 118deg,
+      transparent 118deg 157deg,
+      rgba(168,195,160,.75) 157deg 163deg,
+      transparent 163deg 202deg,
+      rgba(168,195,160,.75) 202deg 208deg,
+      transparent 208deg 247deg,
+      rgba(168,195,160,.75) 247deg 253deg,
+      transparent 253deg 292deg,
+      rgba(168,195,160,.75) 292deg 298deg,
+      transparent 298deg 337deg,
+      rgba(168,195,160,.75) 337deg 343deg,
+      transparent 343deg 360deg
+    ),
+
+    /* center circle */
+    radial-gradient(
+      circle at center,
+      rgba(168,195,160,.55) 0%,
+      rgba(168,195,160,.3) 8%,
+      transparent 8%
     );
 
   background-size:
     120px 120px,
     120px 120px,
+    120px 120px,
     120px 120px;
-}
 
-.beauty-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(246, 243, 234, 0.35);
+  background-position:
+    0 0,
+    0 0,
+    60px 60px,
+    60px 60px;
 }
-
 .beauty-section .section-label,
 .beauty-section h2,
 .beauty-section p {
