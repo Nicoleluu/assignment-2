@@ -2,40 +2,34 @@ const constellation = document.getElementById("constellation");
 const addBtn = document.getElementById("addValue");
 const input = document.getElementById("valueInput");
 
-function createStar(text) {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.textContent = text;
+document.querySelectorAll(".star").forEach(makeDraggable);
 
-  star.style.left = Math.random() * 80 + "%";
-  star.style.top = Math.random() * 80 + "%";
-  star.style.background =
-    ["#A8C3A0", "#AFC6E9", "#E9D66B"][Math.floor(Math.random() * 3)];
-
-  constellation.appendChild(star);
-  makeDraggable(star);
-}
-
-addBtn.addEventListener("click", () => {
-  if (input.value.trim() !== "") {
-    createStar(input.value);
+addBtn.onclick = () => {
+  if(input.value.trim()){
+    const star = document.createElement("div");
+    star.className = "star";
+    star.innerText = input.value;
+    star.style.left = Math.random()*70 + "%";
+    star.style.top = Math.random()*70 + "%";
+    constellation.appendChild(star);
+    makeDraggable(star);
     input.value = "";
   }
-});
+};
 
-function makeDraggable(el) {
+function makeDraggable(el){
   let offsetX, offsetY;
 
-  el.onmousedown = function(e) {
+  el.onmousedown = function(e){
     offsetX = e.offsetX;
     offsetY = e.offsetY;
 
-    document.onmousemove = function(e) {
+    document.onmousemove = function(e){
       el.style.left = e.pageX - constellation.offsetLeft - offsetX + "px";
       el.style.top = e.pageY - constellation.offsetTop - offsetY + "px";
     };
 
-    document.onmouseup = function() {
+    document.onmouseup = function(){
       document.onmousemove = null;
     };
   };
